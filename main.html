@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+
+<head>
+    <title>Search Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript">
+      function clicked() {
+        let container = document.getElementsByClassName('result-container hide');
+        let element = container[0];
+        let searchContainer = document.getElementsByClassName('search-container');
+        let background = searchContainer[0];
+        background.classList.add('hide');
+        element.classList.remove('hide');
+      }
+      function search() {
+        let container = document.getElementsByClassName('result-container');
+        let element = container[0];
+        let searchContainer = document.getElementsByClassName('search-container hide');
+        let background = searchContainer[0];
+        element.classList.add('hide');
+        background.classList.remove('hide');
+      }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="search-container">
+            <div class="background">
+                <img src="./background/img-bg@3x.jpg">
+                <div class="overlay">
+                    <div class="nav-bar">
+                        <div class="searchIcon-container">
+                            <img class="search-icon" src="./ic-logo.svg">
+                        </div>
+                        <div class="nav-bar-items"> Suggest Topics </div>
+                        <div class="nav-bar-items"> Favourites </div>
+                        <div class="nav-bar-items"> Bookmarks </div>
+                        <div class="nav-bar-items"> Editor's Picks </div>
+                    </div>
+                    <div class="search-bar">
+                        <input type="text" name="searchBox" value="Search...">
+                        <div class="search-button"> ⟶ </div>
+                    </div>
+                    <div class="recent-search-container">
+                        <div class="recent-search-container-title"> Recent Searches </div>
+                        <div class="recent-search-item" onclick="clicked()"> Eiffel Tower </div>
+                        <div class="recent-search-item"> Trigonometry </div>
+                        <div class="recent-search-item"> Why Mars? </div>
+                        <div class="recent-search-item"> Iron and Wine </div>
+                        <div class="recent-search-item"> Time Travel </div>
+                        <div class="recent-search-item"> Show All </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="result-container hide">
+            <div class="nav-bar">
+                <div class="searchIcon-container" onclick="search()">
+                    <img class="search-icon" src="https://cdn.zeplin.io/5b431509a314a07b65154053/screens/3A01A248-ACC1-4B26-87D8-2D2F2B94CE25.png">
+                </div>
+                <div class="nav-bar-items"> Suggest Topics </div>
+                <div class="nav-bar-items"> Favourites </div>
+                <div class="nav-bar-items"> Bookmarks </div>
+                <div class="nav-bar-items"> Editor's Picks </div>
+            </div>
+            <div class="image-container">
+                <img src="./eiffel-tower/img-01@3x.jpg">
+            </div>
+            <div class="description">
+                <div class="description-title"> Eiffel Tower </div>
+                <div class="sub-heading">Tour Eiffel · Since 1887</div>
+                <div class="filters">
+                  <div class="filter-type active">General</div>
+                  <div class="filter-type">History</div>
+                  <div class="filter-type">Literature</div>
+                  <div class="filter-type">Politics</div>
+                  <div class="filter-type">Arts</div>
+                  <div class="filter-type">News</div>
+                  <div class="filter-type">Social</div>
+                </div>
+                <div class="info">
+                  The Eiffel Tower is a wrought iron lattice tower on the Champ de Mars in Paris, France. It is named after the engineer Gustave Eiffel, whose company designed and built the tower.
+                </div>
+                <img src="img/img-map.jpg" srcset="map/img-map@2x.jpg 2x, img/img-map@3x.jpg 3x" class="img_map">
+
+
+                <div class="info">
+                  Constructed from 1887–89 as the entrance to the 1889 World's Fair, it was initially criticized by some of France's leading artists and intellectuals for its design, but it has become a global cultural icon of France and one of the most recognisable structures in the world.[3] The Eiffel Tower is the most-visited paid monument in the world; 6.91 million people ascended it in 2015.
+                </div>
+
+                <div class="info">
+                  The tower is 324 metres (1,063 ft) tall, about the same height as an 81-storey building, and the tallest structure in Paris. Its base is square, measuring 125 metres (410 ft) on each side. During its construction, the Eiffel Tower surpassed the Washington Monument to become the tallest man-made structure in the world, a title it held for 41 years until the Chrysler Building in New York City was finished in 1930. Due to the addition of a broadcasting aerial at the top of the tower in 1957, it is now taller than the Chrysler Building by 5.2 metres (17 ft). Excluding transmitters, the Eiffel Tower is the second tallest structure in France after the Millau Viaduct.
+                </div>
+
+                <div class="info">
+                  The tower has three levels for visitors, with restaurants on the first and second levels. The top level's upper platform is 276 m (906 ft) above the ground – the highest observation deck accessible to the public in the European Union. Tickets can be purchased to ascend by stairs or lift to the first and second levels. The climb from ground level to the first level is over 300 steps, as is the climb from the first level to the second. Although there is a staircase to the top level, it is usually accessible only by lift.
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
